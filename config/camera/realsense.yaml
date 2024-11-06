@@ -1,0 +1,11 @@
+_target_: src.camera.realsense.Realsense
+
+# 相机参数
+serial_number: "036422060422"
+rgb_resolution: [1920, 1080]
+depth_resolution: [1280, 720]
+fps: 30
+depth_range: [0.1, 10.0]
+align_frames: true
+decimate: 1
+calibration_file: "calibrations/camera_819612073139.json"

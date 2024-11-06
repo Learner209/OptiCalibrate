@@ -1,0 +1,11 @@
+defaults:
+  - robot: flexiv
+  - camera: realsense
+  - marker: charuco
+  - calibration: eye_to_hand
+  - collector: default
+  - _self_
+
+hydra:
+  run:
+    dir: outputs/${now:%Y-%m-%d}/${now:%H-%M-%S}

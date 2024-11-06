@@ -1,0 +1,25 @@
+2024-11-06 15:27:35.429 | INFO     | __main__:async_main:23 - 正在初始化机器人...
+2024-11-06 15:27:35.432 | INFO     | src.robot.flexiv:__init__:22 - 正在连接Flexiv机器人 192.168.2.110...
+2024-11-06 15:27:36.035 | INFO     | src.robot.flexiv:__init__:26 - 正在使能机器人...
+2024-11-06 15:27:36.060 | INFO     | src.robot.flexiv:__init__:28 - 机器人初始化完成
+2024-11-06 15:27:36.060 | INFO     | __main__:async_main:30 - 正在初始化相机...
+2024-11-06 15:27:36.623 | INFO     | __main__:async_main:37 - 正在初始化标记检测器...
+2024-11-06 15:27:36.627 | INFO     | __main__:async_main:44 - 正在初始化手眼标定器...
+2024-11-06 15:27:36.633 | INFO     | src.calibration.hand_eye_calibrator:__init__:65 - 手眼标定器初始化完成，使用eye_in_hand方法
+2024-11-06 15:27:36.634 | INFO     | __main__:async_main:50 - 系统初始化完成
+2024-11-06 15:27:36.634 | INFO     | __main__:async_main:51 - 按 's' 键保存当前姿态，按 'ESC' 键结束采集
+2024-11-06 15:27:36.634 | INFO     | src.calibration.data_collector:__init__:55 - 数据采集器初始化完成
+2024-11-06 15:27:36.635 | INFO     | src.calibration.data_collector:collect_data:110 - 开始采集数据
+2024-11-06 15:27:36.635 | INFO     | src.calibration.data_collector:collect_data:111 - 按 's' 键保存当前姿态，按 'ESC' 键结束采集
+2024-11-06 15:27:36.635 | INFO     | src.calibration.data_collector:collect_data:112 - 目标采集 10 - 30 组数据
+2024-11-06 15:27:36.635 | ERROR    | __main__:async_main:84 - 程序运行出错: module 'asyncio' has no attribute 'to_thread'
+2024-11-06 15:27:36.635 | ERROR    | __main__:async_main:86 - Traceback (most recent call last):
+  File "/home/yutong/OptiCalibrate/main.py", line 63, in async_main
+    robot_poses, marker_poses = await collector.collect_data()
+  File "/home/yutong/OptiCalibrate/src/calibration/data_collector.py", line 116, in collect_data
+    robot_pose, color_frame = await self.collect_frame()
+  File "/home/yutong/OptiCalibrate/src/calibration/data_collector.py", line 60, in collect_frame
+    robot_pose = await asyncio.to_thread(self.robot.get_current_pose)
+AttributeError: module 'asyncio' has no attribute 'to_thread'
+
+2024-11-06 15:27:36.647 | INFO     | __main__:async_main:90 - 程序已终止

@@ -1,0 +1,23 @@
+2024-11-06 15:28:32.118 | INFO     | __main__:async_main:23 - 正在初始化机器人...
+2024-11-06 15:28:32.120 | INFO     | src.robot.flexiv:__init__:22 - 正在连接Flexiv机器人 192.168.2.110...
+2024-11-06 15:28:32.723 | INFO     | src.robot.flexiv:__init__:26 - 正在使能机器人...
+2024-11-06 15:28:32.748 | INFO     | src.robot.flexiv:__init__:28 - 机器人初始化完成
+2024-11-06 15:28:32.749 | INFO     | __main__:async_main:30 - 正在初始化相机...
+2024-11-06 15:28:33.225 | INFO     | __main__:async_main:37 - 正在初始化标记检测器...
+2024-11-06 15:28:33.229 | INFO     | __main__:async_main:44 - 正在初始化手眼标定器...
+2024-11-06 15:28:33.235 | INFO     | src.calibration.hand_eye_calibrator:__init__:65 - 手眼标定器初始化完成，使用eye_in_hand方法
+2024-11-06 15:28:33.235 | INFO     | __main__:async_main:50 - 系统初始化完成
+2024-11-06 15:28:33.235 | INFO     | __main__:async_main:51 - 按 's' 键保存当前姿态，按 'ESC' 键结束采集
+2024-11-06 15:28:33.236 | INFO     | src.calibration.data_collector:__init__:59 - 数据采集器初始化完成
+2024-11-06 15:28:33.236 | INFO     | src.calibration.data_collector:collect_data:119 - 开始采集数据
+2024-11-06 15:28:33.236 | INFO     | src.calibration.data_collector:collect_data:120 - 按 's' 键保存当前姿态，按 'ESC' 键结束采集
+2024-11-06 15:28:33.236 | INFO     | src.calibration.data_collector:collect_data:121 - 目标采集 10 - 30 组数据
+2024-11-06 15:28:33.839 | ERROR    | __main__:async_main:84 - 程序运行出错: module 'asyncio' has no attribute 'to_thread'
+2024-11-06 15:28:33.839 | ERROR    | __main__:async_main:86 - Traceback (most recent call last):
+  File "/home/yutong/OptiCalibrate/main.py", line 63, in async_main
+    robot_poses, marker_poses = await collector.collect_data()
+  File "/home/yutong/OptiCalibrate/src/calibration/data_collector.py", line 136, in collect_data
+    result_img = await asyncio.to_thread(
+AttributeError: module 'asyncio' has no attribute 'to_thread'
+
+2024-11-06 15:28:33.855 | INFO     | __main__:async_main:90 - 程序已终止

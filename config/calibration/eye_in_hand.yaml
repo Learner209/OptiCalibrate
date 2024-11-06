@@ -1,0 +1,4 @@
+_target_: src.calibration.hand_eye_calibrator.HandEyeCalibrator
+method: "eye_in_hand"
+calib_method: "CALIB_HAND_EYE_TSAI"
+output_path: "calibrations/eye_in_hand_result.json"

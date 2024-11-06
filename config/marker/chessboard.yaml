@@ -1,0 +1,13 @@
+_target_: src.marker.chessboard.Chessboard
+pattern_size: [11, 8]
+square_size: 0.015
+
+parameters:
+  criteria:
+    type: [cv2.TERM_CRITERIA_EPS, cv2.TERM_CRITERIA_MAX_ITER]
+    maxCount: 30
+    epsilon: 0.001
+  flags:
+    - cv2.CALIB_CB_ADAPTIVE_THRESH
+    - cv2.CALIB_CB_NORMALIZE_IMAGE
+    - cv2.CALIB_CB_FILTER_QUADS

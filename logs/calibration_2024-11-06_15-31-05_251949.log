@@ -1,0 +1,96 @@
+2024-11-06 15:31:05.254 | INFO     | __main__:async_main:23 - 正在初始化机器人...
+2024-11-06 15:31:05.256 | INFO     | src.robot.flexiv:__init__:22 - 正在连接Flexiv机器人 192.168.2.110...
+2024-11-06 15:31:05.859 | INFO     | src.robot.flexiv:__init__:26 - 正在使能机器人...
+2024-11-06 15:31:05.884 | INFO     | src.robot.flexiv:__init__:28 - 机器人初始化完成
+2024-11-06 15:31:05.884 | INFO     | __main__:async_main:30 - 正在初始化相机...
+2024-11-06 15:31:06.671 | INFO     | __main__:async_main:37 - 正在初始化标记检测器...
+2024-11-06 15:31:06.684 | INFO     | __main__:async_main:44 - 正在初始化手眼标定器...
+2024-11-06 15:31:06.702 | INFO     | src.calibration.hand_eye_calibrator:__init__:65 - 手眼标定器初始化完成，使用eye_in_hand方法
+2024-11-06 15:31:06.702 | INFO     | __main__:async_main:50 - 系统初始化完成
+2024-11-06 15:31:06.702 | INFO     | __main__:async_main:51 - 按 's' 键保存当前姿态，按 'ESC' 键结束采集
+2024-11-06 15:31:06.703 | INFO     | src.calibration.data_collector:__init__:59 - 数据采集器初始化完成
+2024-11-06 15:31:06.704 | INFO     | src.calibration.data_collector:collect_data:113 - 开始采集数据
+2024-11-06 15:31:06.704 | INFO     | src.calibration.data_collector:collect_data:114 - 按 's' 键保存当前姿态，按 'ESC' 键结束采集
+2024-11-06 15:31:06.705 | INFO     | src.calibration.data_collector:collect_data:115 - 目标采集 10 - 30 组数据
+2024-11-06 15:31:14.272 | WARNING  | src.calibration.data_collector:collect_data:169 - 采样数量不足，需要至少 10 组数据
+2024-11-06 15:31:15.797 | WARNING  | src.calibration.data_collector:collect_data:169 - 采样数量不足，需要至少 10 组数据
+2024-11-06 15:31:16.200 | WARNING  | src.calibration.data_collector:collect_data:169 - 采样数量不足，需要至少 10 组数据
+2024-11-06 15:31:16.378 | WARNING  | src.calibration.data_collector:collect_data:169 - 采样数量不足，需要至少 10 组数据
+2024-11-06 15:31:16.548 | WARNING  | src.calibration.data_collector:collect_data:169 - 采样数量不足，需要至少 10 组数据
+2024-11-06 15:31:16.680 | WARNING  | src.calibration.data_collector:collect_data:169 - 采样数量不足，需要至少 10 组数据
+2024-11-06 15:31:18.563 | WARNING  | src.calibration.data_collector:collect_data:169 - 采样数量不足，需要至少 10 组数据
+2024-11-06 15:31:18.811 | WARNING  | src.calibration.data_collector:collect_data:169 - 采样数量不足，需要至少 10 组数据
+2024-11-06 15:31:19.027 | WARNING  | src.calibration.data_collector:collect_data:169 - 采样数量不足，需要至少 10 组数据
+2024-11-06 15:31:19.140 | WARNING  | src.calibration.data_collector:collect_data:169 - 采样数量不足，需要至少 10 组数据
+2024-11-06 15:31:19.277 | WARNING  | src.calibration.data_collector:collect_data:169 - 采样数量不足，需要至少 10 组数据
+2024-11-06 15:31:19.455 | WARNING  | src.calibration.data_collector:collect_data:169 - 采样数量不足，需要至少 10 组数据
+2024-11-06 15:31:19.623 | WARNING  | src.calibration.data_collector:collect_data:169 - 采样数量不足，需要至少 10 组数据
+2024-11-06 15:31:19.770 | WARNING  | src.calibration.data_collector:collect_data:169 - 采样数量不足，需要至少 10 组数据
+2024-11-06 15:31:19.968 | WARNING  | src.calibration.data_collector:collect_data:169 - 采样数量不足，需要至少 10 组数据
+2024-11-06 15:31:20.241 | WARNING  | src.calibration.data_collector:collect_data:169 - 采样数量不足，需要至少 10 组数据
+2024-11-06 15:31:20.474 | WARNING  | src.calibration.data_collector:collect_data:169 - 采样数量不足，需要至少 10 组数据
+2024-11-06 15:31:23.972 | INFO     | src.calibration.data_collector:collect_data:161 - 保存第 1 组数据
+2024-11-06 15:31:24.179 | INFO     | src.calibration.data_collector:collect_data:161 - 保存第 2 组数据
+2024-11-06 15:31:24.332 | INFO     | src.calibration.data_collector:collect_data:161 - 保存第 3 组数据
+2024-11-06 15:31:24.529 | INFO     | src.calibration.data_collector:collect_data:161 - 保存第 4 组数据
+2024-11-06 15:31:24.696 | INFO     | src.calibration.data_collector:collect_data:161 - 保存第 5 组数据
+2024-11-06 15:31:24.891 | INFO     | src.calibration.data_collector:collect_data:161 - 保存第 6 组数据
+2024-11-06 15:31:25.060 | INFO     | src.calibration.data_collector:collect_data:161 - 保存第 7 组数据
+2024-11-06 15:31:25.222 | INFO     | src.calibration.data_collector:collect_data:161 - 保存第 8 组数据
+2024-11-06 15:31:25.421 | INFO     | src.calibration.data_collector:collect_data:161 - 保存第 9 组数据
+2024-11-06 15:31:25.608 | INFO     | src.calibration.data_collector:collect_data:161 - 保存第 10 组数据
+2024-11-06 15:31:25.608 | INFO     | src.calibration.data_collector:collect_data:164 - 已达到最小采样数量，可以按 'ESC' 结束采集
+2024-11-06 15:31:25.760 | INFO     | src.calibration.data_collector:collect_data:161 - 保存第 11 组数据
+2024-11-06 15:31:25.760 | INFO     | src.calibration.data_collector:collect_data:164 - 已达到最小采样数量，可以按 'ESC' 结束采集
+2024-11-06 15:31:25.935 | INFO     | src.calibration.data_collector:collect_data:161 - 保存第 12 组数据
+2024-11-06 15:31:25.935 | INFO     | src.calibration.data_collector:collect_data:164 - 已达到最小采样数量，可以按 'ESC' 结束采集
+2024-11-06 15:31:26.126 | INFO     | src.calibration.data_collector:collect_data:161 - 保存第 13 组数据
+2024-11-06 15:31:26.126 | INFO     | src.calibration.data_collector:collect_data:164 - 已达到最小采样数量，可以按 'ESC' 结束采集
+2024-11-06 15:31:26.268 | INFO     | src.calibration.data_collector:collect_data:161 - 保存第 14 组数据
+2024-11-06 15:31:26.268 | INFO     | src.calibration.data_collector:collect_data:164 - 已达到最小采样数量，可以按 'ESC' 结束采集
+2024-11-06 15:31:26.471 | INFO     | src.calibration.data_collector:collect_data:161 - 保存第 15 组数据
+2024-11-06 15:31:26.471 | INFO     | src.calibration.data_collector:collect_data:164 - 已达到最小采样数量，可以按 'ESC' 结束采集
+2024-11-06 15:31:26.654 | INFO     | src.calibration.data_collector:collect_data:161 - 保存第 16 组数据
+2024-11-06 15:31:26.655 | INFO     | src.calibration.data_collector:collect_data:164 - 已达到最小采样数量，可以按 'ESC' 结束采集
+2024-11-06 15:31:26.875 | INFO     | src.calibration.data_collector:collect_data:161 - 保存第 17 组数据
+2024-11-06 15:31:26.876 | INFO     | src.calibration.data_collector:collect_data:164 - 已达到最小采样数量，可以按 'ESC' 结束采集
+2024-11-06 15:31:27.071 | INFO     | src.calibration.data_collector:collect_data:161 - 保存第 18 组数据
+2024-11-06 15:31:27.071 | INFO     | src.calibration.data_collector:collect_data:164 - 已达到最小采样数量，可以按 'ESC' 结束采集
+2024-11-06 15:31:27.235 | INFO     | src.calibration.data_collector:collect_data:161 - 保存第 19 组数据
+2024-11-06 15:31:27.235 | INFO     | src.calibration.data_collector:collect_data:164 - 已达到最小采样数量，可以按 'ESC' 结束采集
+2024-11-06 15:31:27.412 | INFO     | src.calibration.data_collector:collect_data:161 - 保存第 20 组数据
+2024-11-06 15:31:27.412 | INFO     | src.calibration.data_collector:collect_data:164 - 已达到最小采样数量，可以按 'ESC' 结束采集
+2024-11-06 15:31:27.616 | INFO     | src.calibration.data_collector:collect_data:161 - 保存第 21 组数据
+2024-11-06 15:31:27.617 | INFO     | src.calibration.data_collector:collect_data:164 - 已达到最小采样数量，可以按 'ESC' 结束采集
+2024-11-06 15:31:27.769 | INFO     | src.calibration.data_collector:collect_data:161 - 保存第 22 组数据
+2024-11-06 15:31:27.769 | INFO     | src.calibration.data_collector:collect_data:164 - 已达到最小采样数量，可以按 'ESC' 结束采集
+2024-11-06 15:31:27.942 | INFO     | src.calibration.data_collector:collect_data:161 - 保存第 23 组数据
+2024-11-06 15:31:27.942 | INFO     | src.calibration.data_collector:collect_data:164 - 已达到最小采样数量，可以按 'ESC' 结束采集
+2024-11-06 15:31:28.109 | INFO     | src.calibration.data_collector:collect_data:161 - 保存第 24 组数据
+2024-11-06 15:31:28.109 | INFO     | src.calibration.data_collector:collect_data:164 - 已达到最小采样数量，可以按 'ESC' 结束采集
+2024-11-06 15:31:28.251 | INFO     | src.calibration.data_collector:collect_data:161 - 保存第 25 组数据
+2024-11-06 15:31:28.252 | INFO     | src.calibration.data_collector:collect_data:164 - 已达到最小采样数量，可以按 'ESC' 结束采集
+2024-11-06 15:31:28.392 | INFO     | src.calibration.data_collector:collect_data:161 - 保存第 26 组数据
+2024-11-06 15:31:28.392 | INFO     | src.calibration.data_collector:collect_data:164 - 已达到最小采样数量，可以按 'ESC' 结束采集
+2024-11-06 15:31:28.568 | INFO     | src.calibration.data_collector:collect_data:161 - 保存第 27 组数据
+2024-11-06 15:31:28.568 | INFO     | src.calibration.data_collector:collect_data:164 - 已达到最小采样数量，可以按 'ESC' 结束采集
+2024-11-06 15:31:28.724 | INFO     | src.calibration.data_collector:collect_data:161 - 保存第 28 组数据
+2024-11-06 15:31:28.724 | INFO     | src.calibration.data_collector:collect_data:164 - 已达到最小采样数量，可以按 'ESC' 结束采集
+2024-11-06 15:31:29.032 | INFO     | src.calibration.data_collector:collect_data:161 - 保存第 29 组数据
+2024-11-06 15:31:29.032 | INFO     | src.calibration.data_collector:collect_data:164 - 已达到最小采样数量，可以按 'ESC' 结束采集
+2024-11-06 15:31:29.206 | INFO     | src.calibration.data_collector:collect_data:161 - 保存第 30 组数据
+2024-11-06 15:31:29.206 | INFO     | src.calibration.data_collector:collect_data:164 - 已达到最小采样数量，可以按 'ESC' 结束采集
+2024-11-06 15:31:30.658 | INFO     | src.calibration.data_collector:collect_data:173 - 数据采集完成，共采集 30 组数据
+2024-11-06 15:31:30.658 | INFO     | src.calibration.hand_eye_calibrator:calibrate:79 - 开始eye_in_hand标定，使用30组样本
+2024-11-06 15:31:30.662 | INFO     | src.calibration.hand_eye_calibrator:_perform_calibration:158 - 标定完成
+2024-11-06 15:31:30.662 | INFO     | src.calibration.hand_eye_calibrator:save_result:181 - 标定结果已保存至 calibrations/eye_in_hand_result.json
+2024-11-06 15:31:30.662 | INFO     | __main__:async_main:77 - 
+标定结果:
+2024-11-06 15:31:30.662 | INFO     | __main__:async_main:78 - 旋转矩阵 R:
+[[1. 0. 0.]
+ [0. 1. 0.]
+ [0. 0. 1.]]
+2024-11-06 15:31:30.663 | INFO     | __main__:async_main:79 - 平移向量 T:
+[0. 0. 0.]
+2024-11-06 15:31:30.666 | INFO     | __main__:async_main:90 - 程序已终止
+2024-11-06 15:31:30.667 | INFO     | src.robot.flexiv:__del__:55 - 正在关闭机器人连接...

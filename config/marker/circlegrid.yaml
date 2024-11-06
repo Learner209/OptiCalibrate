@@ -1,0 +1,18 @@
+_target_: src.marker.circlegrid.CircleGrid
+pattern_size: [7, 9]    # 圆点网格尺寸 (rows, cols)
+circle_size: 0.015      # 圆点直径(米)
+spacing: 0.03          # 圆点间距(米)
+symmetric_grid: true    # 是否为对称网格
+blob_params:
+  minThreshold: 10
+  maxThreshold: 220
+  thresholdStep: 10
+  filterByArea: true
+  minArea: 50
+  maxArea: 5000
+  filterByCircularity: true
+  minCircularity: 0.8
+  filterByConvexity: true
+  minConvexity: 0.87
+  filterByInertia: true
+  minInertiaRatio: 0.1

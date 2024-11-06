@@ -1,0 +1,32 @@
+2024-11-06 16:15:30.674 | INFO     | __main__:main:72 - 正在初始化机器人...
+2024-11-06 16:15:30.677 | INFO     | src.robot.flexiv:__init__:22 - 正在连接Flexiv机器人 192.168.2.110...
+2024-11-06 16:15:31.280 | INFO     | src.robot.flexiv:__init__:26 - 正在使能机器人...
+2024-11-06 16:15:31.305 | INFO     | src.robot.flexiv:__init__:28 - 机器人初始化完成
+2024-11-06 16:15:31.305 | INFO     | __main__:main:79 - 正在初始化相机...
+2024-11-06 16:15:31.843 | INFO     | __main__:main:86 - 正在初始化标记检测器...
+2024-11-06 16:15:31.846 | INFO     | __main__:main:93 - 正在初始化手眼标定器...
+2024-11-06 16:15:31.857 | ERROR    | __main__:main:124 - 程序运行出错: Error in call to target 'src.calibration.hand_eye_calibrator.HandEyeCalibrator':
+TypeError("__init__() got an unexpected keyword argument 'calib_method'")
+full_key: calibration
+2024-11-06 16:15:31.857 | ERROR    | __main__:main:126 - Traceback (most recent call last):
+  File "/home/yutong/anaconda3/envs/robocal/lib/python3.8/site-packages/hydra/_internal/instantiate/_instantiate2.py", line 92, in _call_target
+    return _target_(*args, **kwargs)
+TypeError: __init__() got an unexpected keyword argument 'calib_method'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/yutong/OptiCalibrate/main.py", line 94, in main
+    calibrator = instantiate(cfg.calibration)
+  File "/home/yutong/anaconda3/envs/robocal/lib/python3.8/site-packages/hydra/_internal/instantiate/_instantiate2.py", line 226, in instantiate
+    return instantiate_node(
+  File "/home/yutong/anaconda3/envs/robocal/lib/python3.8/site-packages/hydra/_internal/instantiate/_instantiate2.py", line 347, in instantiate_node
+    return _call_target(_target_, partial, args, kwargs, full_key)
+  File "/home/yutong/anaconda3/envs/robocal/lib/python3.8/site-packages/hydra/_internal/instantiate/_instantiate2.py", line 97, in _call_target
+    raise InstantiationException(msg) from e
+hydra.errors.InstantiationException: Error in call to target 'src.calibration.hand_eye_calibrator.HandEyeCalibrator':
+TypeError("__init__() got an unexpected keyword argument 'calib_method'")
+full_key: calibration
+
+2024-11-06 16:15:31.869 | INFO     | __main__:main:130 - 程序已终止
+2024-11-06 16:15:31.869 | INFO     | src.robot.flexiv:__del__:55 - 正在关闭机器人连接...

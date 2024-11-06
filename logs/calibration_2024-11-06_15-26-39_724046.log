@@ -1,0 +1,19 @@
+2024-11-06 15:26:39.726 | INFO     | __main__:async_main:23 - 正在初始化机器人...
+2024-11-06 15:26:39.728 | INFO     | src.robot.flexiv:__init__:22 - 正在连接Flexiv机器人 192.168.2.110...
+2024-11-06 15:26:40.331 | INFO     | src.robot.flexiv:__init__:26 - 正在使能机器人...
+2024-11-06 15:26:40.357 | INFO     | src.robot.flexiv:__init__:28 - 机器人初始化完成
+2024-11-06 15:26:40.357 | INFO     | __main__:async_main:30 - 正在初始化相机...
+2024-11-06 15:26:41.002 | INFO     | __main__:async_main:37 - 正在初始化标记检测器...
+2024-11-06 15:26:41.006 | INFO     | __main__:async_main:44 - 正在初始化手眼标定器...
+2024-11-06 15:26:41.012 | INFO     | src.calibration.hand_eye_calibrator:__init__:65 - 手眼标定器初始化完成，使用eye_in_hand方法
+2024-11-06 15:26:41.012 | INFO     | __main__:async_main:50 - 系统初始化完成
+2024-11-06 15:26:41.012 | INFO     | __main__:async_main:51 - 按 's' 键保存当前姿态，按 'ESC' 键结束采集
+2024-11-06 15:26:41.012 | ERROR    | __main__:async_main:84 - 程序运行出错: __init__() missing 5 required positional arguments: 'save_images', 'image_dir', 'min_samples', 'max_samples', and 'display_scale'
+2024-11-06 15:26:41.013 | ERROR    | __main__:async_main:86 - Traceback (most recent call last):
+  File "/home/yutong/OptiCalibrate/main.py", line 55, in async_main
+    collector = CalibrationDataCollector(
+  File "/home/yutong/OptiCalibrate/src/calibration/data_collector.py", line 31, in __init__
+    self.config = CollectorConfig(**kwargs)
+TypeError: __init__() missing 5 required positional arguments: 'save_images', 'image_dir', 'min_samples', 'max_samples', and 'display_scale'
+
+2024-11-06 15:26:41.023 | INFO     | __main__:async_main:90 - 程序已终止
