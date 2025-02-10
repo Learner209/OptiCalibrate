@@ -1,3 +1,4 @@
+import asyncio
 import cv2
 import hydra
 from omegaconf import DictConfig
@@ -6,9 +7,13 @@ from hydra.utils import instantiate
 
 @hydra.main(version_base="1.3", config_path="config", config_name="config")
 def main(cfg: DictConfig):
+    return asyncio.run(async_main(cfg))
+
+async def async_main(cfg: DictConfig):
     try:
         # 初始化机器人
         logger.info("正在初始化机器人...")
+        breakpoint()
         robot = instantiate(cfg.robot)
         if robot is None:
             logger.error("机器人初始化失败")
@@ -45,15 +50,21 @@ def main(cfg: DictConfig):
 
         logger.info("系统初始化完成")
 
-        # 采集标定数据
-        robot_poses, marker_poses = collector.collect_data()
+        # 异步采集标定数据
+        robot_poses, marker_poses = await collector.collect_data()
         
         if len(robot_poses) < 2:
             logger.error("采集的数据不足,至少需要2组数据")
             return
             
         # 执行手眼标定
-        R, T = calibrator.calibrate(robot_poses, marker_poses)
+        # 由于标定计算比较耗时，可以在执行器中运行
+        R, T = await asyncio.get_event_loop().run_in_executor(
+            None, 
+            calibrator.calibrate,
+            robot_poses, 
+            marker_poses
+        )
         
         if R is not None and T is not None:
             # 保存标定结果 
@@ -80,4 +91,5 @@ if __name__ == "__main__":
                retention="1 week",
                level="DEBUG")
     
+    # 直接调用main函数
     main()

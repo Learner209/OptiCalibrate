@@ -1,7 +1,6 @@
 import pyrealsense2 as rs
 import numpy as np
 from .base_camera import BaseCamera
-from omegaconf import DictConfig
 import json
 from loguru import logger
 import os
@@ -22,7 +21,7 @@ class RealsenseConfig:
 class Realsense(BaseCamera):
     def __init__(self, **kwargs):
        # 将kwargs转换为配置对象
-        self.config = RealsenseConfig(**kwargs) 
+        self.config = RealsenseConfig(**kwargs)
         
         self.pipeline = rs.pipeline()
         self.rs_config = rs.config()
@@ -36,12 +35,12 @@ class Realsense(BaseCamera):
                                    rs.format.bgr8, 
                                    self.config.fps)
         
-        self.rs_config.enable_stream(rs.stream.depth, 
-                                   self.config.depth_resolution[0], 
-                                   self.config.depth_resolution[1], 
-                                   rs.format.z16, 
+        self.rs_config.enable_stream(rs.stream.depth,
+                                   self.config.depth_resolution[0],
+                                   self.config.depth_resolution[1],
+                                   rs.format.z16,
                                    self.config.fps)
-        
+
         self.profile = self.pipeline.start(self.rs_config)
         
         # 检查并加载相机内参
@@ -84,7 +83,7 @@ class Realsense(BaseCamera):
             if not color_frame or not depth_frame:
                 return None, None
             return np.asanyarray(color_frame.get_data()), np.asanyarray(depth_frame.get_data())
-        except rs.error as e:
+        except Exception as e:
             logger.error(f"RealSense error: {str(e)}")
             return None, None
 
