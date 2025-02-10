@@ -1,10 +1,10 @@
 _target_: src.marker.charuco.ChArUco
 dictionary: "DICT_5X5_250"
-board_size: [3, 3]      # 棋盘格尺寸
-square_size: 0.028      # 棋盘格方块大小(米)
-marker_size: 0.025      # ArUco标记大小(米)
+board_size: [3, 3] # 棋盘格尺寸
+square_size: 0.028 # 棋盘格方块大小(米)
+marker_size: 0.025 # ArUco标记大小(米)
 parameters:
-    adaptiveThreshWinSizeMin: 3
-    adaptiveThreshWinSizeMax: 23
-    adaptiveThreshWinSizeStep: 10
-    adaptiveThreshConstant: 7
+  adaptiveThreshWinSizeMin: 3
+  adaptiveThreshWinSizeMax: 23
+  adaptiveThreshWinSizeStep: 10
+  adaptiveThreshConstant: 7

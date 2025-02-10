@@ -5,15 +5,16 @@ from omegaconf import DictConfig
 from loguru import logger
 from hydra.utils import instantiate
 
+
 @hydra.main(version_base="1.3", config_path="config", config_name="config")
 def main(cfg: DictConfig):
     return asyncio.run(async_main(cfg))
+
 
 async def async_main(cfg: DictConfig):
     try:
         # 初始化机器人
         logger.info("正在初始化机器人...")
-        breakpoint()
         robot = instantiate(cfg.robot)
         if robot is None:
             logger.error("机器人初始化失败")
@@ -32,7 +33,7 @@ async def async_main(cfg: DictConfig):
         if marker_detector is None:
             logger.error("标记检测器初始化失败")
             return
-            
+
         # 初始化手眼标定器
         logger.info("正在初始化手眼标定器...")
         calibrator = instantiate(cfg.calibration)
@@ -45,31 +46,31 @@ async def async_main(cfg: DictConfig):
             cfg.collector,
             robot=robot,
             camera=camera,
-            marker_detector=marker_detector
+            marker_detector=marker_detector,
         )
 
         logger.info("系统初始化完成")
 
         # 异步采集标定数据
         robot_poses, marker_poses = await collector.collect_data()
-        
+
         if len(robot_poses) < 2:
             logger.error("采集的数据不足,至少需要2组数据")
             return
-            
+
         # 执行手眼标定
         # 由于标定计算比较耗时，可以在执行器中运行
         R, T = await asyncio.get_event_loop().run_in_executor(
-            None, 
+            None,
             calibrator.calibrate,
-            robot_poses, 
-            marker_poses
+            robot_poses,
+            marker_poses,
         )
-        
+
         if R is not None and T is not None:
-            # 保存标定结果 
+            # 保存标定结果
             calibrator.save_result(R, T)
-            
+
             # 显示标定结果
             logger.info("\n标定结果:")
             logger.info(f"旋转矩阵 R:\n{R}")
@@ -84,12 +85,15 @@ async def async_main(cfg: DictConfig):
         cv2.destroyAllWindows()
         logger.info("程序已终止")
 
+
 if __name__ == "__main__":
     # 配置logger
-    logger.add("logs/calibration_{time}.log", 
-               rotation="1 day", 
-               retention="1 week",
-               level="DEBUG")
-    
+    logger.add(
+        "logs/calibration_{time}.log",
+        rotation="1 day",
+        retention="1 week",
+        level="DEBUG",
+    )
+
     # 直接调用main函数
     main()

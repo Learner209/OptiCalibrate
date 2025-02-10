@@ -3,12 +3,16 @@ import numpy as np
 from omegaconf import DictConfig
 from typing import Optional, Tuple, Any
 
+
 class BaseMarker(ABC):
     def __init__(self, config: DictConfig):
         self.config = config
 
     @abstractmethod
-    def detect(self, image: np.ndarray) -> Tuple[Optional[np.ndarray], Optional[np.ndarray], Any]:
+    def detect(
+        self,
+        image: np.ndarray,
+    ) -> Tuple[Optional[np.ndarray], Optional[np.ndarray], Any]:
         """
         检测图像中的标记
         Args:
@@ -21,9 +25,13 @@ class BaseMarker(ABC):
         pass
 
     @abstractmethod
-    def estimate_pose(self, corners: np.ndarray, ids: np.ndarray,
-                     camera_matrix: np.ndarray, 
-                     dist_coeffs: np.ndarray) -> Tuple[Optional[np.ndarray], Optional[np.ndarray], Optional[float]]:
+    def estimate_pose(
+        self,
+        corners: np.ndarray,
+        ids: np.ndarray,
+        camera_matrix: np.ndarray,
+        dist_coeffs: np.ndarray,
+    ) -> Tuple[Optional[np.ndarray], Optional[np.ndarray], Optional[float]]:
         """
         估计标记的位姿
         Args:
@@ -39,10 +47,16 @@ class BaseMarker(ABC):
         pass
 
     @abstractmethod
-    def draw_results(self, image: np.ndarray, corners: np.ndarray, ids: np.ndarray,
-                    rvecs: Optional[np.ndarray] = None, tvecs: Optional[np.ndarray] = None,
-                    camera_matrix: Optional[np.ndarray] = None, 
-                    dist_coeffs: Optional[np.ndarray] = None) -> np.ndarray:
+    def draw_results(
+        self,
+        image: np.ndarray,
+        corners: np.ndarray,
+        ids: np.ndarray,
+        rvecs: Optional[np.ndarray] = None,
+        tvecs: Optional[np.ndarray] = None,
+        camera_matrix: Optional[np.ndarray] = None,
+        dist_coeffs: Optional[np.ndarray] = None,
+    ) -> np.ndarray:
         """
         绘制检测和位姿估计结果
         Args:

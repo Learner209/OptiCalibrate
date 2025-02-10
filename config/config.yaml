@@ -1,7 +1,7 @@
 defaults:
   - robot: flexiv
   - camera: realsense
-  - marker: charuco
+  - marker: chessboard
   - calibration: eye_to_hand
   - collector: default
   - _self_
